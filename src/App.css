@@ -1,0 +1,88 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #c8e4b2;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  display: flex;
+  padding: 2vw;
+  align-items: center;
+  color: #006400;
+  gap: 1rem;
+}
+
+header > .title {
+  font-size: clamp(10px, 4vw, 3rem);
+  font-weight: 800;
+  flex: 2;
+  text-align: start;
+}
+
+header > .score {
+  flex: 2;
+}
+
+header > .score > p {
+  display: flex;
+  font-size: clamp(10px, 4vw, 2rem);
+}
+
+.character-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+  padding: 2vw;
+}
+
+.character-item {
+  border: 3px solid #006400;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #9ed2be;
+  color: #fff;
+  cursor: pointer;
+}
+
+.character-item:hover {
+  border: 5px solid #333333;
+}
+
+.character-item > img {
+  width: 100%;
+  height: 80%;
+}
+
+h1,
+p {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+h3 {
+  display: flex;
+  height: 30%;
+  font-size: clamp(0.5rem, 1.2rem, 2rem);
+  justify-content: center;
+  align-items: center;
+  color: #006400;
+}
+
+@media (max-width: 1023px) {
+  .character-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .character-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
